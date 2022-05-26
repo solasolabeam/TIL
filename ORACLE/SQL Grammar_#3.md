@@ -1,8 +1,8 @@
 # SQL 문법 실습_#3 📌
 [실습]
-1)student라는 이름으로 테이블 생성
-컬럼명)    id           name         age        score
-데이터타입) varchar2(10) varchar2(30) number(3)  number(3)
+1)student라는 이름으로 테이블 생성<br>
+컬럼명)    id           name         age        score<br>
+데이터타입) varchar2(10) varchar2(30) number(3)  number(3)<br>
 제약조건) primary key | not null | not null | not null
 ```sql
 CREATE TABLE student(
@@ -45,21 +45,21 @@ SELECT SUM(score) FROM student;
 
 1)emp테이블에서 커미션 항목이 입력된 사원들의 이름과 급여,커미션을
 출력하시오.
-```
+```sql
 SELECT ename,sal,comm FROM emp WHERE comm IS NOT NULL;
 ```
 2)커미션 계약을 맺은 모든 사원의 이름,급여,커미션을 출력하는데 커미션을 기준으로 내림차순 정렬하시오.
-```
+```sql
 SELECT ename,sal,comm FROM emp 
 WHERE comm IS NOT NULL ORDER BY comm DESC;
 ```
 3)월급과 커미션을 합친 금액이 2,000이상인 급여를 받는 사원의 이름,업무,월급,커미션,고용날짜를 출력하시오.(단, 고용날짜는 1980-12-17 형태로 출력하시오)
-```
+```sql
 SELECT ename,job,sal,comm,
        TO_CHAR(hiredate,'YYYY-MM-DD') hiredate
 FROM emp WHERE sal+NVL(comm,0) >= 2000;
 ```
-4)CASE~WHEN~THEN 를 이용해서 다음 데이터에 따라 JOB 열의 값을 기준으로 모든 사원의 등급을 표시하시오.
+4)CASE ~ WHEN ~ THEN 를 이용해서 다음 데이터에 따라 JOB 열의 값을 기준으로 모든 사원의 등급을 표시하시오.
 
 |업무 | 등급|
 |:---:|:---:|
