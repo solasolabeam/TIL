@@ -9,7 +9,8 @@
 ## 분류
 <br>
 
-
+- React
+- Next.js
 - JAVA
 - ORACLE DB
 - HTML
